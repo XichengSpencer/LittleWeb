@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel = "stylesheet" type= "text/css" href="style.css">
+    <link href ="https://fonts.googleapis.com/css?family=Open+Sans:600,700" rel = "stylesheet">
+    <meta charset="UTF-8">
+    <title>Data Calculator</title>
+</head>
+<body>
+    <div id = "container">
+        <div class="title">
+            <h1>Time Calculator</h1>
+            <a href = 'sleepCalc.html'>Sleep Cycle Calculator</a>
+        </div>
+        <form  method="post" id="timeForm" onsubmit=" event.preventDefault();">
+            <div class="input" id="input0">
+                <label for="hour0">Hour:</label>
+                <input type="text" id="hour0" name="hour" placeholder="Enter hour" />
+                <small></small>
+                <label for="minute0">Minute:</label>
+                <input type="text" id="minute0" name="minute" placeholder="Enter minute"/>
+                <label for="second0">Second:</label>
+                <input type="text" id="second0" name="second" placeholder="Enter second" />
+                <small></small>
+                <label>(Start Time for Sleep Period)</label>
+            </div>
+
+            <div class="input" id = "input1">
+                <label for="hour1">Hour:</label>
+                <input type="text" id="hour1" name="hour" placeholder="Enter hour" />
+                <small></small>
+                <label for="minute1">Minute:</label>
+                <input type="text" id="minute1" name="minute" placeholder="Enter minute"/>
+                <label for="second1">Second:</label>
+                <input type="text" id="second1" name="second" placeholder="Enter second" />
+                <label>(End Time for Sleep Period)</label>
+            </div>
+
+            <button onclick="AddRow();">Add Row</button>
+            <button onclick="RemoveRow();">Remove Row</button>
+            <button onclick="sleep_period();">Calculate Sleep Period</button>
+
+        </form>
+
+        <div class="field">
+            <button id = "+" onclick="add('')">Compute Sum</button>
+            <button id = "-" onclick="add('subtract')">Subtract</button>
+        </div>
+
+        <div class="multiply input">
+            <label for="multiplier">Multiply:</label>
+            <input type="text" id="multiplier"  placeholder="Enter a number" />
+            <button type="submit" id = "mlt" onclick="preprocess('multiply')">×</button>
+            <button type="submit" id = "dvd" onclick="preprocess('division')">÷</button>
+        </div>
+
+        <div class="output">
+                <label for="out_h">Hour:</label>
+                <p type="text" id="out_h"  placeholder="" ></p>
+                <small></small>
+                <label for="out_m">Minute:</label>
+                <p  id="out_m" ></p>
+                <label for="out_s">Second:</label>
+                <p  id="out_s" ></p>
+                <small></small>
+                <p id="sleep"></p>
+        </div>
+
+    </div>
+    <script src="calcu.js"></script>
+</body>
+</html>

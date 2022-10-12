@@ -1,0 +1,36 @@
+body{
+    font-family: 'Open Sans',sans-serif;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(time.jpg);
+}
+
+#container{
+    width: 60%;
+    height: 500px;
+    background-color: rgba(246, 197, 147, 0.5);
+    margin: 20px auto;
+    color:darkorange;
+    padding: 16px;
+}
+
+h1{
+    padding-left:50px;
+    color: #FFB134;
+    font-family: Papyrus, fantasy;font-weight: 1000;font-size: 2.5em;
+    display: inline-block;
+}
+a{
+    padding-left:100px;
+    display: inline-block;
+
+}
+#timeForm{
+    font-family: Georgia;
+}
+.output{
+    display: flex;
+    float:left;
+    width:100%
+}
+p{
+    width:20%;
+}
